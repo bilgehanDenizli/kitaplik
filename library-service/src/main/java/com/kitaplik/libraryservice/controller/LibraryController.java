@@ -41,8 +41,15 @@ public class LibraryController {
         return ResponseEntity.ok(libraryService.createLibrary());
     }
 
-    @PutMapping("/addBookToLibrary") ResponseEntity<Void> addBookToLibrary(@RequestBody AddBookRequest addBookRequest){
+    @PutMapping("/addBookToLibrary")
+    public ResponseEntity<Void> addBookToLibrary(@RequestBody AddBookRequest addBookRequest){
         libraryService.addBookToLibrary(addBookRequest);
+        return ResponseEntity.ok().build();
+    }
+
+    @PutMapping("/addBookToLibraryGrpc")
+    public ResponseEntity<Void> addBookToLibraryGrpc(@RequestBody AddBookRequest addBookRequest){
+        libraryService.addBookToLibraryGrpc(addBookRequest);
         return ResponseEntity.ok().build();
     }
 

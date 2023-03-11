@@ -19,7 +19,7 @@
       <module name="book-service" target="11" />
       <module name="config-server" target="11" />
       <module name="eureka-server" target="11" />
-      <module name="kitaplik-common" target="1.5" />
+      <module name="kitaplik-common" target="11" />
       <module name="library-service" target="11" />
     </bytecodeTargetLevel>
   </component>
